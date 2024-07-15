@@ -1,0 +1,41 @@
+{% extends 'welcomepage/head.html' %}
+{% load static %}
+
+
+{% block title %}Форма авторизации{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+                    <!-------Image------>
+                    <img src= "{% static 'welcomepage/img/pylogo.png' %}" alt="Python-логотип">
+                    <div class="text">
+                        <span>Блог-портфолио начинающего Python-разработчика</span>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="input-box">
+                        <header>Форма авторизации на сайте</header>
+                        <p id="text-info">
+                            Данные из формы будут занесены в таблицу для удобного отслеживания статистики посещений.
+                            Пожалуйста, заполните форму.
+                        </p>
+                        <br>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.user_name }}<br>
+                            {{ form.location }}<br>
+                            <span>{{ error }}</span>
+                            <div class="input-field">
+                            <input type="submit" class="submit" value="Войти">
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

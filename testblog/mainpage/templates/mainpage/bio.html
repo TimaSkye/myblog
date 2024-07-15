@@ -1,0 +1,91 @@
+{% extends 'mainpage/index.html' %}
+{% load static %}
+
+
+{% block title %}Обо мне{% endblock %}
+
+{% block content %}
+  <div class="container-flex">
+    <div class="row">
+      <div class="col-12">
+        <h1>Тимур Даянов</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <p>Я закончил Челябинский Государственный университет в 2016 году, специалист таможенного дела.
+        С ноября 2018 года по настоящее время работаю в Госавтоинспекции города Челябинска, с мая 2022 года занимаю должность
+        инженера-электроника группы связи и специальной техники.</p>
+        <p>В мои должностные обязанности входит администрирование
+        закрытой защищенной сети, ремонт и обслуживание ПК, обслуживание систем видеонаблюдения, установка прикладного
+        програмного обеспечения, работа с СКЗИ.</p>
+        <p>К Информационным технологиям и направлению разработки начал проявлять интерес в школьные годы,
+        сначала с изучения языка Pascal, позже написанием страниц на чистом HMTL. В 10 классе занял первое место
+        в научной конфереции города Троицка среди учащихся старших классов, после чего занял четвертое место в областной
+        научной коференции, которая проходила в городе Челябинске. Темой для работы выбрал "Интерактивный видео-учебник
+        по графическим редакторам", т.к. также проявлял интерес к компьютерной графике. Учебник же был реализован с использованием
+        технологии NoCode, а если быть точным то собран при помощи конструктора Autorun.exe в приложении "AutoPlay Media Studio"</p>
+        <p>С недавнего времени активно изучаю язык Python, для себя выбрал направление backend-разработки, но также
+        заинтересовало написание Telegram-ботов, парсинг данных, разработка GUI-приложений. Также интересно направление
+        frontend-разработки, но оно менее приоритено.</p>
+        <p>С огромным желанием приступлю к работе в паре с опытным наставником, для дальнейшего развития.</p>
+        <p><h3>Мой стек на данный момент:</h3>
+        <ul>
+          <li>Python 3.12</li>
+          <li>Django 5</li>
+          <li>Aiogram 3</li>
+          <li>Kivy/KivyMD</li>
+          <li>HTML/CSS/Bootstrap</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+        </ul>
+        </p>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img src="{% static 'mainpage/img/my.jpg' %}" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Курсы которые я окончил</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://stepik.org/course/191774/info">Stepik. Введение в SQL</a></p>
+        <img src="{% static 'mainpage/img/sql.png' %}" class="img-fluid">
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://stepik.org/course/58852/info">Stepik. Поколение Python": курс для начинающих</a></p>
+        <img src="{% static 'mainpage/img/py1.png' %}" class="img-fluid">
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://stepik.org/course/68343/info">Stepik. Поколение Python": курс для продвинутых</a></p>
+        <img src="{% static 'mainpage/img/py2.png' %}" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Контакты для связи</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>Телефон: +7 (919) 406-53-72</p>
+        <p>Почта: <a class="link-offset-2 link-underline link-underline-opacity-0" href="mailto: tima.skye@yandex.ru">tima.skye@yandex.ru</a></p>
+        <p>Telegram: <a class="link-offset-2 link-underline link-underline-opacity-0" href="https://t.me/tima_skye">@tima_skye</a></p>
+        <p>Также Вы можете заполнить <a class="link-offset-2 link-underline link-underline-opacity-0" href="{% url 'callback' %}">форму обратной связи</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

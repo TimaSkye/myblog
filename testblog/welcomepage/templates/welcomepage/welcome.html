@@ -1,0 +1,34 @@
+{% extends 'welcomepage/head.html' %}
+{% load static %}
+
+
+{% block title %}Добро пожаловать!{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-6 side-image">
+                <!-------Image------>
+                <img src="{% static 'welcomepage/img/pylogo.png' %}" alt="Python-логотип">
+                <div class="text">
+                    <span>Блог-портфолио начинающего Python-разработчика</span>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+                <div class="input-box">
+                    <header>Я рад приветствовать Вас на своей странице!</header>
+                    <p id="text-info">
+                        Прошу Вас заполнить небольшую форму.
+                        Данные я сохраню в базе для ведения собственной статистики.
+                    </p>
+                    <br>
+                    <div class="input-field">
+                        <a href="{% url 'singin' %}"> <input type="submit" class="submit" value="Заполнить форму"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
