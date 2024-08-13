@@ -9,5 +9,4 @@ urlpatterns = [
     path('pykivy/', views.pykivy, name="pykivy"),
     path('pybots/', views.pybots, name="pybots"),
     path('nocode/', views.nocode, name="nocode"),
-    path('callback/', views.callback, name="callback"),
 ]

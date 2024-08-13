@@ -1,25 +1,122 @@
 from django.shortcuts import render
+from .models import Callback
+from .forms import CallbackForm
+
 
 def mainpage(request):
-    return render(request, 'mainpage/content.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/content.html', data)
+
 
 def bio(request):
-    return render(request, 'mainpage/bio.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/bio.html', data)
+
 
 def pydjango(request):
-    return render(request, 'mainpage/pydjango.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/pydjango.html', data)
+
 
 def pykivy(request):
-    return render(request, 'mainpage/pykivy.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/pykivy.html', data)
+
 
 def pybots(request):
-    return render(request, 'mainpage/pybots.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/pybots.html', data)
+
 
 def nocode(request):
-    return render(request, 'mainpage/nocode.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
+
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/nocode.html', data)
+
 
 def content(request):
-    return render(request, 'mainpage/content.html')
+    error = ''
+    if request.method == "POST":
+        form = CallbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "Некорректно заполнена форма!"
 
-def callback(request):
-    return render(request, 'mainpage/callback.html')
+    form = CallbackForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainpage/content.html', data)
